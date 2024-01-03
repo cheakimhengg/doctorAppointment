@@ -1,12 +1,7 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import TopBar from "../ui/topBar";
-import NavBar from "../ui/navBar";
-import Footer from "../ui/footer";
-import "./bookingappointment.css";
+import "./booking.css";
 
-const AppointmentsBooking = () => {
+const BookingAppointment = () => {
 	const [timeSlots, setTimeSlots] = useState([
 		"09:00 AM",
 		"10:00 AM",
@@ -19,14 +14,11 @@ const AppointmentsBooking = () => {
 	]);
 	const [bookedAppointments, setBookedAppointments] = useState([]);
 	const [selectedTime, setSelectedTime] = useState("");
-	const [isBooked, setIsBooked] = useState(false);
-	const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
-	const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
 	const renderTimeSlots = () => {
-		return timeSlots.map((timeSlot, index) => (
+		return timeSlots.map((timeSlot) => (
 			<div
-				key={index}
+				key={timeSlot}
 				className={`time-slot ${
 					bookedAppointments.includes(timeSlot) ? "booked" : ""
 				}`}
@@ -51,17 +43,23 @@ const AppointmentsBooking = () => {
 
 	const openBookingModal = (timeSlot, isBooked) => {
 		setSelectedTime(timeSlot);
-		setIsBooked(isBooked);
-		setIsBookingModalOpen(true);
+
+		if (isBooked) {
+			document.querySelector(".cancel-button").style.display = "inline-block";
+		} else {
+			document.querySelector(".cancel-button").style.display = "none";
+		}
+
+		document.getElementById("bookingModal").style.display = "flex";
 	};
 
 	const openEditModal = () => {
-		setIsEditModalOpen(true);
+		document.getElementById("editModal").style.display = "flex";
 	};
 
 	const closeModal = () => {
-		setIsBookingModalOpen(false);
-		setIsEditModalOpen(false);
+		document.getElementById("bookingModal").style.display = "none";
+		document.getElementById("editModal").style.display = "none";
 	};
 
 	const confirmBooking = () => {
@@ -74,27 +72,23 @@ const AppointmentsBooking = () => {
 		const index = bookedAppointments.indexOf(selectedTime);
 
 		if (index !== -1) {
-			bookedAppointments.splice(index, 1);
-			setBookedAppointments([...bookedAppointments]);
+			setBookedAppointments([
+				...bookedAppointments.slice(0, index),
+				...bookedAppointments.slice(index + 1),
+			]);
 			closeModal();
 			alert(`Booking canceled for ${selectedTime}`);
 		}
 	};
 
 	return (
-		<>
-			{/* <TopBar /> */}
-			{/* <NavBar /> */}
+		<div>
 			<div id="app">
 				{renderTimeSlots()}
 				{renderButtons()}
 			</div>
-			<div
-				id="bookingModal"
-				className={`modal ${
-					isBookingModalOpen ? "display-flex" : "display-none"
-				}`}
-			>
+
+			<div id="bookingModal" className="modal">
 				<div className="modal-content">
 					<span className="close-button" onClick={closeModal}>
 						&times;
@@ -106,18 +100,13 @@ const AppointmentsBooking = () => {
 					<button className="button" onClick={confirmBooking}>
 						Confirm Booking
 					</button>
-					<button
-						className={`button cancel-button ${isBooked ? "" : "display-none"}`}
-						onClick={cancelBooking}
-					>
+					<button className="button cancel-button" onClick={cancelBooking}>
 						Cancel Booking
 					</button>
 				</div>
 			</div>
-			<div
-				id="editModal"
-				className={`modal ${isEditModalOpen ? "display-flex" : "display-none"}`}
-			>
+
+			<div id="editModal" className="modal">
 				<div className="modal-content">
 					<span className="close-button" onClick={closeModal}>
 						&times;
@@ -126,8 +115,8 @@ const AppointmentsBooking = () => {
 					<p>Edit functionality goes here.</p>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 
-export default AppointmentsBooking;
+export default BookingAppointment;
