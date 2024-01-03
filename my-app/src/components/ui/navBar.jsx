@@ -24,7 +24,7 @@ function NavBar() {
 							</a>
 						</li>
 						<li>
-							<a class="nav-link scrollto " href="">
+							<a class="nav-link scrollto " href="/">
 								Notifications
 							</a>
 						</li>
@@ -34,7 +34,7 @@ function NavBar() {
 							</a>
 						</li>
 						<li>
-							<a class="getstarted scrollto" href="/login.html">
+							<a class="getstarted scrollto" href="login">
 								Login
 							</a>
 						</li>

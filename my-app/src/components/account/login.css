@@ -1,0 +1,42 @@
+.login-container {
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+	/* height: 100vh; */
+	padding-top: 100px;
+}
+
+.form-container {
+	width: 400px;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.btn {
+	cursor: pointer;
+	width: 100%;
+}
+
+.or-separator {
+	display: flex;
+	align-items: center;
+	color: #aaa;
+}
+
+.or-separator hr {
+	border: 1px solid #aaa;
+}
+
+.or-text {
+	margin: 0 10px;
+}
+
+.social-login button {
+	margin-bottom: 10px;
+}
