@@ -1,0 +1,276 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+body {
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	color: #444444;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+	color: #5cb874;
+}
+
+a:hover {
+	color: #80c792;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+  # Back to top button
+  --------------------------------------------------------------*/
+.back-to-top {
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	right: 15px;
+	bottom: 15px;
+	z-index: 996;
+	background: #5cb874;
+	width: 40px;
+	height: 40px;
+	border-radius: 4px;
+	transition: all 0.4s;
+}
+
+.back-to-top i {
+	font-size: 24px;
+	color: #fff;
+	line-height: 0;
+}
+
+.back-to-top:hover {
+	background: #78c48c;
+	color: #fff;
+}
+
+.back-to-top.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+/*--------------------------------------------------------------
+  # Top Bar
+  --------------------------------------------------------------*/
+#topbar {
+	background: #fbfbfb;
+	font-size: 15px;
+	height: 40px;
+	padding: 0;
+}
+
+#topbar .contact-info a {
+	line-height: 0;
+	color: #444444;
+	transition: 0.3s;
+}
+
+#topbar .contact-info a:hover {
+	color: #5cb874;
+}
+
+#topbar .contact-info i {
+	color: #5cb874;
+	line-height: 0;
+	margin-right: 5px;
+}
+
+#topbar .contact-info .phone-icon {
+	margin-left: 15px;
+}
+
+#topbar .social-links a {
+	color: #6f6f6f;
+	padding: 4px 12px;
+	display: inline-block;
+	line-height: 1px;
+	transition: 0.3s;
+}
+
+#topbar .social-links a:hover {
+	color: #5cb874;
+}
+
+/*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+#header {
+	background: #fff;
+	transition: all 0.5s;
+	z-index: 997;
+	height: 70px;
+}
+
+#header.header-scrolled {
+	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header .logo {
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+#header .logo a {
+	color: #5cb874;
+}
+
+#header .logo img {
+	max-height: 40px;
+}
+
+.scrolled-offset {
+	margin-top: 70px;
+}
+
+/*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+.navbar {
+	padding: 0;
+}
+
+.navbar ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+	align-items: center;
+}
+
+.navbar li {
+	position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0 10px 30px;
+	font-size: 15px;
+	color: #222222;
+	white-space: nowrap;
+	transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+	font-size: 12px;
+	line-height: 0;
+	margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+	color: #5cb874;
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+	color: #5cb874;
+	padding: 8px 25px;
+	margin-left: 30px;
+	border-radius: 4px;
+	border: 2px solid #5cb874;
+	transition: 0.3s;
+	font-size: 14px;
+}
+
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+	background: #5cb874;
+	color: #fff;
+}
+
+.doctor-info-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	opacity: 0;
+	animation: fadeIn 1s forwards;
+}
+
+/*--------------------------------------------------------------
+# Basic Doctor Info
+--------------------------------------------------------------*/
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+
+.doctor-img {
+	flex: 1;
+	padding: 20px;
+}
+
+.doctor-img img {
+	width: 100%;
+	overflow: hidden;
+	animation: fadeIn 1s 0.5s forwards;
+}
+
+.doctor-details {
+	flex: 1;
+	padding: 20px;
+}
+
+.doctor-name {
+	color: #333;
+}
+
+.specialization {
+	color: #555;
+}
+
+.location,
+.contact {
+	margin-top: 10px;
+	color: #777;
+}
+
+.about {
+	margin-top: 20px;
+	color: #444;
+	animation: fadeIn 1s 1s forwards;
+}
+
+.appointments-btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #5cb874;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Add transition effect for background-color, color, and transform */
+}
+
+.appointments-btn:hover {
+	background-color: #136f47; /* Change background color on hover */
+	color: #fff; /* Change text color on hover */
+	transform: scale(1.05); /* Add scaling effect on hover */
+}
