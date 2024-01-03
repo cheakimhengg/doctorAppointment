@@ -13,16 +13,16 @@ const HomePage = () => {
 			<section>
 				<div className="home-page-img-doctor1">
 					<div>
-						<img src="/img/doctor/homepage_doc.jpeg" alt="HomePage_Doctor1" />
+						<img src="/img/homepage_doc.jpeg" alt="HomePage_Doctor1" />
 					</div>
 				</div>
 				<div className="appoinment-button">
-					<a href="http://127.0.0.1:3000/appointmentCalendar/bookingappointment.html">
+					<a href="bookingappointment">
 						<button type="button" className="btn btn-success btn-lg">
 							Appoinment
 						</button>
 					</a>
-					<a href="http://127.0.0.1:5500/services.html">
+					<a href="service">
 						<button type="button" className="btn btn-light btn-lg">
 							Services
 						</button>
@@ -47,10 +47,7 @@ const HomePage = () => {
 								<div className="product-item">
 									<div className="product-img">
 										<a href="doctorInfo">
-											<img
-												src="/img/doctor/doctor-thumb-01.jpg"
-												alt="doctor-img"
-											/>
+											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
 										</a>
 									</div>
 									<div className="product-content">
@@ -70,10 +67,7 @@ const HomePage = () => {
 								<div className="product-item">
 									<div className="product-img">
 										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img
-												src="/img/doctor/doctor-thumb-01.jpg"
-												alt="doctor-img"
-											/>
+											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
 										</a>
 									</div>
 									<div className="product-content">
@@ -93,10 +87,7 @@ const HomePage = () => {
 								<div className="product-item">
 									<div className="product-img">
 										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img
-												src="/img/doctor/doctor-thumb-01.jpg"
-												alt="doctor-img"
-											/>
+											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
 										</a>
 									</div>
 									<div className="product-content">
@@ -116,10 +107,7 @@ const HomePage = () => {
 								<div className="product-item">
 									<div className="product-img">
 										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img
-												src="/img/doctor/doctor-thumb-01.jpg"
-												alt="doctor-img"
-											/>
+											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
 										</a>
 									</div>
 									<div className="product-content">
@@ -139,10 +127,7 @@ const HomePage = () => {
 								<div className="product-item">
 									<div className="product-img">
 										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img
-												src="/img/doctor/doctor-thumb-01.jpg"
-												alt="doctor-img"
-											/>
+											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
 										</a>
 									</div>
 									<div className="product-content">
@@ -162,10 +147,7 @@ const HomePage = () => {
 								<div className="product-item">
 									<div className="product-img">
 										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img
-												src="/img/doctor/doctor-thumb-01.jpg"
-												alt="doctor-img"
-											/>
+											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
 										</a>
 									</div>
 									<div className="product-content">
@@ -185,10 +167,7 @@ const HomePage = () => {
 								<div className="product-item">
 									<div className="product-img">
 										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img
-												src="/img/doctor/doctor-thumb-01.jpg"
-												alt="doctor-img"
-											/>
+											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
 										</a>
 									</div>
 									<div className="product-content">
@@ -208,10 +187,7 @@ const HomePage = () => {
 								<div className="product-item">
 									<div className="product-img">
 										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img
-												src="/img/doctor/doctor-thumb-01.jpg"
-												alt="doctor-img"
-											/>
+											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
 										</a>
 									</div>
 									<div className="product-content">

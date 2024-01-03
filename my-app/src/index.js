@@ -14,6 +14,8 @@ import Neurologist from "./components/neurologist";
 import Psychiatrist from "./components/psychiatrist";
 import Dentist from "./components/dentist";
 import HealthArticles from "./components/healthArticles";
+import Bookingappointment from "./components/booking/bookingappointment";
+import Login from "./components/login";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -72,6 +74,14 @@ const router = createBrowserRouter([
 	{
 		path: "healthArticles",
 		element: <HealthArticles />,
+	},
+	{
+		path: "bookingappointment",
+		element: <Bookingappointment />,
+	},
+	{
+		path: "login",
+		element: <Login />,
 	},
 ]);
 
