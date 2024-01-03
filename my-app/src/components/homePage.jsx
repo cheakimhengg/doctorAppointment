@@ -4,6 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import TopBar from "./ui/topBar";
 import NavBar from "./ui/navBar";
 import Footer from "./ui/footer";
+import DoctorCard from "./ui/doctorCard";
 
 const HomePage = () => {
 	return (
@@ -44,167 +45,14 @@ const HomePage = () => {
 					<div className="container">
 						<div className="product">
 							<div className="product-container">
-								<div className="product-item">
-									<div className="product-img">
-										<a href="doctorInfo">
-											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
-										</a>
-									</div>
-									<div className="product-content">
-										<a
-											href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html"
-											className="doctor-title"
-										>
-											Dr. Kang Mo Jin
-										</a>
-										<p className="price">
-											<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-												Cardiologist
-											</a>
-										</p>
-									</div>
-								</div>
-								<div className="product-item">
-									<div className="product-img">
-										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
-										</a>
-									</div>
-									<div className="product-content">
-										<a
-											href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html"
-											className="doctor-title"
-										>
-											Dr. Kang Mo Jin
-										</a>
-										<p className="price">
-											<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-												Cardiologist
-											</a>
-										</p>
-									</div>
-								</div>
-								<div className="product-item">
-									<div className="product-img">
-										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
-										</a>
-									</div>
-									<div className="product-content">
-										<a
-											href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html"
-											className="doctor-title"
-										>
-											Dr. Kang Mo Jin
-										</a>
-										<p className="price">
-											<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-												Cardiologist
-											</a>
-										</p>
-									</div>
-								</div>
-								<div className="product-item">
-									<div className="product-img">
-										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
-										</a>
-									</div>
-									<div className="product-content">
-										<a
-											href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html"
-											className="doctor-title"
-										>
-											Dr. Kang Mo Jin
-										</a>
-										<p className="price">
-											<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-												Cardiologist
-											</a>
-										</p>
-									</div>
-								</div>
-								<div className="product-item">
-									<div className="product-img">
-										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
-										</a>
-									</div>
-									<div className="product-content">
-										<a
-											href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html"
-											className="doctor-title"
-										>
-											Dr. Kang Mo Jin
-										</a>
-										<p className="price">
-											<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-												Cardiologist
-											</a>
-										</p>
-									</div>
-								</div>
-								<div className="product-item">
-									<div className="product-img">
-										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
-										</a>
-									</div>
-									<div className="product-content">
-										<a
-											href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html"
-											className="doctor-title"
-										>
-											Dr. Kang Mo Jin
-										</a>
-										<p className="price">
-											<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-												Cardiologist
-											</a>
-										</p>
-									</div>
-								</div>
-								<div className="product-item">
-									<div className="product-img">
-										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
-										</a>
-									</div>
-									<div className="product-content">
-										<a
-											href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html"
-											className="doctor-title"
-										>
-											Dr. Kang Mo Jin
-										</a>
-										<p className="price">
-											<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-												Cardiologist
-											</a>
-										</p>
-									</div>
-								</div>
-								<div className="product-item">
-									<div className="product-img">
-										<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-											<img src="/img/doctor-thumb-01.jpg" alt="doctor-img" />
-										</a>
-									</div>
-									<div className="product-content">
-										<a
-											href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html"
-											className="doctor-title"
-										>
-											Dr. Kang Mo Jin
-										</a>
-										<p className="price">
-											<a href="http://127.0.0.1:3000/doctorInfo/basic-doctor-info.html">
-												Cardiologist
-											</a>
-										</p>
-									</div>
-								</div>
-								{/* Add more product items here */}
+								<DoctorCard />
+								<DoctorCard />
+								<DoctorCard />
+								<DoctorCard />
+								<DoctorCard />
+								<DoctorCard />
+								<DoctorCard />
+								<DoctorCard />
 							</div>
 						</div>
 					</div>
