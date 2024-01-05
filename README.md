@@ -1,34 +1,34 @@
-## Getting Started
+# Welcome to Our Cutting-Edge Project
 
-To quickly get started with this project, follow the steps below.
+Thank you for choosing our innovative project! Follow the modernized steps below to get started quickly.
 
-### Prerequisites
+## Prerequisites
 
-Before you begin, ensure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine.
+Ensure that your machine has [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed before you dive into the project.
 
-### Installation
+## Installation
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/cheakimhengg/doctorAppointment.git
-    ```
+    
+    git clone https://github.com/PisethChuon/Doctor-Appointment-Using-React-Js.git
+    
 
 2. Navigate to the project directory:
 
-    ```bash
+    
     cd my-app
-    ```
+    
 
 3. Install dependencies:
 
-    ```bash
+    
     npm install
-    ```
+    
 
 ## Usage
 
-To run the project locally, use the following command:
+Run the project locally with the following command:
 
 ```bash
 npm start
