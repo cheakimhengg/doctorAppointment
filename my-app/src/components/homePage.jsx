@@ -19,12 +19,16 @@ const HomePage = () => {
 				</div>
 				<div className="appoinment-button">
 					<a href="bookingappointment">
-						<button type="button" className="btn btn-success btn-lg">
-							Appoinment
+						<button
+							id="Appointment"
+							type="button"
+							className="btn btn-success btn-lg"
+						>
+							Appointment
 						</button>
 					</a>
 					<a href="service">
-						<button type="button" className="btn btn-light btn-lg">
+						<button id="Services" type="button" className="btn btn-lg">
 							Services
 						</button>
 					</a>
