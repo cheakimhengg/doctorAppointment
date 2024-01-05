@@ -5,8 +5,10 @@ import TopBar from "./ui/topBar";
 import NavBar from "./ui/navBar";
 import Footer from "./ui/footer";
 import DoctorCard from "./ui/doctorCard";
+import { useLocation } from "react-router-dom";
 
 const HomePage = () => {
+	const location = useLocation();
 	return (
 		<div>
 			<TopBar />

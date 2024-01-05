@@ -17,6 +17,7 @@ import HealthArticles from "./components/healthArticles";
 import Bookingappointment from "./components/booking/bookingappointment";
 import Login from "./components/account/login";
 import Signup from "./components/account/signUp";
+import HomePage from "./components/homePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -85,8 +86,12 @@ const router = createBrowserRouter([
 		element: <Login />,
 	},
 	{
-		path: "Signup",
+		path: "signup",
 		element: <Signup />,
+	},
+	{
+		path: "homePage",
+		element: <HomePage />,
 	},
 ]);
 
