@@ -1,21 +1,44 @@
 import React, { useState } from "react";
-import "./login.css"; // Import the CSS file for styling
+import axios from "axios";
+import "./login.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+	const history = useNavigate();
+
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
-	const handleLogin = (e) => {
+	async function submit(e) {
 		e.preventDefault();
-		// Add your login logic here
-		console.log("Login button clicked");
-	};
+
+		try {
+			await axios
+				.post("http://localhost:8000/login", {
+					email,
+					password,
+				})
+				.then((res) => {
+					if (res.data == "exist") {
+						history("/homePage");
+					} else if (res.data == "notexist") {
+						alert("Invalid email or password");
+					}
+				})
+				.catch((e) => {
+					alert("wrong details");
+					console.log(e);
+				});
+		} catch (e) {
+			console.log(e);
+		}
+	}
 
 	return (
 		<div className="login-container">
 			<div className="form-container">
 				<h2 className="text-center mb-4">Login</h2>
-				<form onSubmit={handleLogin}>
+				<form action="POST">
 					<div className="form-group">
 						<input
 							type="text"
@@ -40,7 +63,11 @@ const Login = () => {
 						</a>
 					</div>
 					<div className="form-group">
-						<button type="submit" className="btn btn-success btn-block">
+						<button
+							type="submit"
+							onClick={submit}
+							className="btn btn-success btn-block"
+						>
 							Login
 						</button>
 					</div>
@@ -48,7 +75,7 @@ const Login = () => {
 
 				<div className="text-center mb-3">
 					<span>Don't have an account? </span>
-					<a href="Signup" className="text-decoration-none">
+					<a href="signup" className="text-decoration-none">
 						Signup
 					</a>
 				</div>

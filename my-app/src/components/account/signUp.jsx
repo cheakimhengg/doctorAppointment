@@ -1,30 +1,62 @@
 import React, { useState } from "react";
-import "./signUp.css"; // Import the CSS file for styling
+import axios from "axios";
+import "./signUp.css";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+	const history = useNavigate();
+
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
 
-	const handleSignup = (e) => {
+	async function submit(e) {
 		e.preventDefault();
 
-		// Add your signup logic here
-		console.log("Signup button clicked");
-		console.log("First Name:", firstName);
-		console.log("Last Name:", lastName);
-		console.log("Email:", email);
-		console.log("Password:", password);
-		console.log("Confirm Password:", confirmPassword);
-	};
+		try {
+			await axios
+				.post("http://localhost:8000/signup", {
+					email,
+					password,
+					confirmPassword,
+				})
+				.then((res) => {
+					if (res.data === "exist") {
+						alert("User already exist");
+					} else if (res.data === "notexist") {
+						history("/homePage");
+					} else if (res.data === "notmatch") {
+						alert("password not match");
+					}
+				})
+				.catch((e) => {
+					alert("Email or Password is incorrect");
+					console.log(e);
+				});
+		} catch (e) {
+			console.log(e);
+		}
+	}
+
+	// const handleSignup = (e) => {
+	// 	e.preventDefault();
+
+	// 	// Add your signup logic here
+	// 	console.log("Signup button clicked");
+	// 	console.log("First Name:", firstName);
+	// 	console.log("Last Name:", lastName);
+	// 	console.log("Email:", email);
+	// 	console.log("Password:", password);
+	// 	console.log("Confirm Password:", confirmPassword);
+	// };
 
 	return (
 		<div className="signup-container">
 			<div className="form-container">
 				<h2 className="text-center mb-4">Signup</h2>
-				<form onSubmit={handleSignup}>
+				<form action="POST">
 					<div className="form-group">
 						<input
 							type="text"
@@ -71,7 +103,11 @@ const Signup = () => {
 						/>
 					</div>
 					<div className="form-group">
-						<button type="submit" className="btn btn-success btn-block">
+						<button
+							type="submit"
+							onClick={submit}
+							className="btn btn-success btn-block"
+						>
 							Signup
 						</button>
 					</div>
