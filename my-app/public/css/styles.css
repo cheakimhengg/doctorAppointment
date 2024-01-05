@@ -214,20 +214,21 @@ h6 {
 /*--------------------------------------------------------------
 # home-page-doctor1
 --------------------------------------------------------------*/
-/* .home-page-img-doctor1 {
-    position: absolute;
-    top: 10%;
+.home-page-img-doctor1 {
+    /* position: absolute; */
+    /* top: 10%;
     left: 25%;
-    transform: translate(-50%, -50%);
-} */
+    transform: translate(-50%, -50%); */
+    padding-left: 10%;
+}
 /*--------------------------------------------------------------
 # Appoinment-button & Verman Hospital
 --------------------------------------------------------------*/
 
 .trustd-medical-clinic-in-cambodia {
     position: absolute;
-    top: 40%;
-    right: 6%;
+    top: 30%;
+    right: 10%;
     transform: translate(-50%, -50%);
 }
 #verman-hospital {
@@ -238,9 +239,19 @@ h6 {
 }
 .appoinment-button {
     position: absolute;
-    top: 60%;
-    right: 6%;
+    top: 50%;
+    right: 9%;
     transform: translate(-50%, -50%);
+}
+
+#Appointment{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#Services{
+    border: 1px solid grey;
+    background-color: #F5F7F8;
 }
 
 
