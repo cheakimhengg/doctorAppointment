@@ -20,7 +20,7 @@ const Login = () => {
 				})
 				.then((res) => {
 					if (res.data == "exist") {
-						history("/homePage");
+						history("/");
 					} else if (res.data == "notexist") {
 						alert("Invalid email or password");
 					}
