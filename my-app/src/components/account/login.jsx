@@ -34,6 +34,15 @@ const Login = () => {
 		}
 	}
 
+	function showPassword() {
+		var x = document.getElementById("password");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+
 	return (
 		<div className="login-container">
 			<div className="form-container">
@@ -41,7 +50,7 @@ const Login = () => {
 				<form action="POST">
 					<div className="form-group">
 						<input
-							type="text"
+							type="email"
 							className="form-control"
 							placeholder="Email"
 							value={email}
@@ -49,13 +58,24 @@ const Login = () => {
 						/>
 					</div>
 					<div className="form-group">
-						<input
-							type="password"
-							className="form-control"
-							placeholder="Password"
-							value={password}
-							onChange={(e) => setPassword(e.target.value)}
-						/>
+						<div className="password-input">
+							<input
+								type="password"
+								className="form-control"
+								placeholder="Password"
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}
+								id="password"
+							/>
+							<span
+								onClick={showPassword}
+								class="material-symbols-outlined"
+								id="eye_icon"
+							>
+								visibility
+							</span>
+							{/* <span class="material-symbols-outlined">visibility_off</span> */}
+						</div>
 					</div>
 					<div className="form-group text-center">
 						<a href="#" className="text-decoration-none">

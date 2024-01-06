@@ -40,6 +40,24 @@ const Signup = () => {
 		}
 	}
 
+	function showPassword() {
+		var x = document.getElementById("password");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+
+	function showConPassword() {
+		var x = document.getElementById("con_password");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+
 	// const handleSignup = (e) => {
 	// 	e.preventDefault();
 
@@ -77,7 +95,7 @@ const Signup = () => {
 					</div>
 					<div className="form-group">
 						<input
-							type="text"
+							type="email"
 							className="form-control"
 							placeholder="Email"
 							value={email}
@@ -85,22 +103,42 @@ const Signup = () => {
 						/>
 					</div>
 					<div className="form-group">
-						<input
-							type="password"
-							className="form-control"
-							placeholder="Password"
-							value={password}
-							onChange={(e) => setPassword(e.target.value)}
-						/>
+						<div className="password-input">
+							<input
+								type="password"
+								className="form-control"
+								placeholder="Password"
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}
+								id="password"
+							/>
+							<span
+								onClick={showPassword}
+								class="material-symbols-outlined"
+								id="eye_icon"
+							>
+								visibility
+							</span>
+						</div>
 					</div>
 					<div className="form-group">
-						<input
-							type="password"
-							className="form-control"
-							placeholder="Confirm Password"
-							value={confirmPassword}
-							onChange={(e) => setConfirmPassword(e.target.value)}
-						/>
+						<div className="password-input">
+							<input
+								type="password"
+								className="form-control"
+								placeholder="Confirm Password"
+								value={confirmPassword}
+								onChange={(e) => setConfirmPassword(e.target.value)}
+								id="con_password"
+							/>
+							<span
+								onClick={showConPassword}
+								class="material-symbols-outlined"
+								id="eye_icon"
+							>
+								visibility
+							</span>
+						</div>
 					</div>
 					<div className="form-group">
 						<button

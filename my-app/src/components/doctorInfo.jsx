@@ -12,7 +12,7 @@ function doctorInfo() {
 			<NavBar />
 			<section class="doctor-info-container">
 				<div class="doctor-img">
-					<img src="/img/Doctor-sample.png" alt="Doctor Image" />
+					<img src="/img/doctorInfoRounded.png" alt="Doctor Image" />
 				</div>
 				<div class="doctor-details">
 					<h2 class="doctor-name">Dr. Piseth Chuon</h2>

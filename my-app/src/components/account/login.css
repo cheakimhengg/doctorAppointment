@@ -16,6 +16,20 @@
 
 .form-group {
 	margin-bottom: 15px;
+	display: block;
+}
+
+.password-input {
+	position: relative;
+}
+
+#eye_icon {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .btn {
