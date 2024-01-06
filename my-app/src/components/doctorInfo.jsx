@@ -23,10 +23,7 @@ function doctorInfo() {
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
 						eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					</p>
-					<a
-						href="http://127.0.0.1:3000/appointmentCalendar/bookingappointment.html"
-						class="appointments-btn"
-					>
+					<a href="bookingappointment" class="appointments-btn">
 						Appointments
 					</a>
 				</div>

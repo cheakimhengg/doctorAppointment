@@ -13,7 +13,10 @@ function dentist() {
 			<section>
 				<div className="container">
 					<div className="text">
-						<h2>Why Choose DOC Pro Clinic For Dentist</h2>
+						<h2>
+							Why Choose DOC Pro Clinic <br />
+							For Dentist
+						</h2>
 						<p>
 							Our commitment to quality and convenience sets us apart as a
 							leading Dentist center in Cambodia.
