@@ -11,13 +11,13 @@ Before you begin, ensure you have [Node.js](https://nodejs.org/) and [npm](https
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-project.git
+    git clone https://github.com/cheakimhengg/doctorAppointment
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd your-project
+    cd my-app
     ```
 
 3. Install dependencies:
