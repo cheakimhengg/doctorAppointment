@@ -4,7 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 function NavBar() {
 	return (
-		<header id="header" class="d-flex align-items-center">
+		<header id="header" class="d-flex align-items-center navbar_headerr">
 			<div class="container d-flex align-items-center">
 				<div class="logo me-auto">
 					<a href="/">
